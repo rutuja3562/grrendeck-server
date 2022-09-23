@@ -14,7 +14,7 @@ router.get("", authenticate, async (req, res) => {
             ],
           }
         : {};
-        const users = await User.find(keyword).find({ _id: { $ne: req.user._id } });
+        const users = await User.find({ _id: { $ne: req.user._id } });
         // console.log("req.user._id",req.user._id,_id)
       return res.status(200).send(users);
     } catch (err) {
