@@ -24,7 +24,7 @@ app.post("/register", register);
 
 app.post("/login", login);
 
-app.use("/products", productController);
+app.use("/loggedusers", productController);
 app.use("/sheets", spreadsheetController);
 
 // app.get('/auth/google',
